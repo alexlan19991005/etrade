@@ -1,0 +1,102 @@
+{
+  "start_date": "2021-01-04",
+  "end_date": "2026-11-19",
+  "n_days": 1478,
+  "initial_capital": 100000.0,
+  "commission": 0.0,
+  "slippage_bps": 5.0,
+  "risk_free_rate": 0.0,
+  "strategies": {
+    "trend_ma": {
+      "initial_equity": 100000.0,
+      "final_equity": 141863.35500279875,
+      "total_return": 0.4186335500279874,
+      "cagr": 0.06143639876880114,
+      "max_drawdown": -0.19005288031668333,
+      "sharpe_ratio": 0.5353835640118688,
+      "volatility_annual": 0.12618986935393706,
+      "n_days": 1478,
+      "n_trades": 5,
+      "win_rate": 0.5,
+      "n_closed_legs": 2
+    },
+    "momentum_rotation": {
+      "initial_equity": 100000.0,
+      "final_equity": 442505.4346421603,
+      "total_return": 3.425054346421603,
+      "cagr": 0.2886339229041315,
+      "max_drawdown": -0.24641640816067312,
+      "sharpe_ratio": 1.166611219921931,
+      "volatility_annual": 0.24261705607240389,
+      "n_days": 1478,
+      "n_trades": 393,
+      "win_rate": 0.736318407960199,
+      "n_closed_legs": 201
+    },
+    "mean_reversion_rsi": {
+      "initial_equity": 100000.0,
+      "final_equity": 121733.56861089672,
+      "total_return": 0.21733568610896725,
+      "cagr": 0.034099964127621174,
+      "max_drawdown": -0.09046607462536305,
+      "sharpe_ratio": 0.5370803538449054,
+      "volatility_annual": 0.06643007845581697,
+      "n_days": 1478,
+      "n_trades": 14,
+      "win_rate": 0.7142857142857143,
+      "n_closed_legs": 7
+    },
+    "breakout_donchian": {
+      "initial_equity": 100000.0,
+      "final_equity": 152004.48918969763,
+      "total_return": 0.5200448918969762,
+      "cagr": 0.07400583701128371,
+      "max_drawdown": -0.11618204523746489,
+      "sharpe_ratio": 0.777162270378065,
+      "volatility_annual": 0.09806328697903635,
+      "n_days": 1478,
+      "n_trades": 32,
+      "win_rate": 0.75,
+      "n_closed_legs": 16
+    },
+    "defensive_rotation": {
+      "initial_equity": 100000.0,
+      "final_equity": 127572.42870235049,
+      "total_return": 0.2757242870235048,
+      "cagr": 0.04239329689038174,
+      "max_drawdown": -0.24610676964964895,
+      "sharpe_ratio": 0.4414678204455566,
+      "volatility_annual": 0.1070602938456641,
+      "n_days": 1478,
+      "n_trades": 71,
+      "win_rate": 0.4,
+      "n_closed_legs": 35
+    }
+  },
+  "benchmark_spy_buy_hold": {
+    "initial_equity": 100000.0,
+    "final_equity": 194427.04428144527,
+    "total_return": 0.9442704428144526,
+    "cagr": 0.12003916279674409,
+    "max_drawdown": -0.25370348983128554,
+    "sharpe_ratio": 0.7605724815995812,
+    "volatility_annual": 0.167484102210626,
+    "n_days": 1478,
+    "n_trades": 1,
+    "win_rate": NaN,
+    "n_closed_legs": 0
+  },
+  "equal_weight_portfolio": {
+    "initial_equity": 100000.0,
+    "final_equity": 176996.70622472576,
+    "total_return": 0.7699670622472576,
+    "cagr": 0.102245239278409,
+    "max_drawdown": -0.10866296482826099,
+    "sharpe_ratio": 1.0273430615899455,
+    "volatility_annual": 0.09959471313067518,
+    "n_days": 1478,
+    "n_trades": 515,
+    "win_rate": NaN,
+    "n_closed_legs": 261
+  }
+}
