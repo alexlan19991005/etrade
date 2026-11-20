@@ -78,11 +78,17 @@ class ETradeClient:
         from pyetrade import ETradeOAuth
 
         self._oauth = ETradeOAuth(self.consumer_key, self.consumer_secret)
-        tokens = self._oauth.get_request_token()
-        self._request_tokens = tokens
-        url = tokens.get("authorize_url") or tokens.get("url")
-        logger.info("Open this URL to authorise: %s", url)
-        return url
+        if self.dev:
+            # pyetrade hard-codes the production token endpoints; the
+            # sandbox key must be exchanged at the sandbox host instead.
+            self._oauth.req_token_url = (
+                "https://apisb.etrade.com/oauth/request_token"
+            )
+            self._oauth.access_token_url = (
+                "https://apisb.etrade.com/oauth/access_token"
+            )
+        # pyetrade returns the authorize URL as a plain string.
+        return self._oauth.get_request_token()
 
     def complete_authorization(self, verifier_code: str) -> dict:
         """Finish OAuth with the verification code; cache access tokens."""
